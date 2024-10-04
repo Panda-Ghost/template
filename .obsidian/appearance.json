@@ -1,0 +1,10 @@
+{
+  "cssTheme": "Blue Topaz",
+  "textFontFamily": "JetBrainsMono Nerd Font Mono,PingFang HK",
+  "monospaceFontFamily": "JetBrainsMono Nerd Font Mono",
+  "interfaceFontFamily": "PingFang HK",
+  "translucency": false,
+  "showViewHeader": true,
+  "theme": "system",
+  "nativeMenus": true
+}
