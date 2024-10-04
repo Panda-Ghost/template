@@ -88,8 +88,11 @@ iter split(ll p){
 
 ## 数论
 
-### kuai su mi
+### 快速幂
 
 ```cpp
+const ll MOD=998244353; // 修改
+
+ll qpow()
 
 ```
