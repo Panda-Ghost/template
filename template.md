@@ -15,7 +15,12 @@ void build(int o, int l, int r, seg*s, const T& comp){
 }
 template<class T>
 ll qran(int o, int l, int r, seg* s, const T& comp, ll init){ ll res=init; for(l=l+M-1, r=r+M+1; l^r^1; l>>=1, r>>=1){ if(~l&1) res=f(res, s[l^1].val, comp); if(r&1) res=f(res, s[r^1].val, comp); } return res; }
-template<class T> void edit(int o, int x, ll v, seg* s, const T& comp){ for(s[x+=M].val+=v, x>>=1; x; x>>=1){ s[x].val=f(s[2*x].val, s[2*x+1].val, comp); } }
+template<class T>
+void edit(int o, int x, ll v, seg* s, const T& comp){
+    for(s[x+=M].val+=v, x>>=1; x; x>>=1){
+        s[x].val=f(s[2*x].val, s[2*x+1].val, comp); }
+    
+}
 ```
 
 ### 珂朵莉树
