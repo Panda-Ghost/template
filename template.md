@@ -2,6 +2,8 @@
 
 ## 写在前面
 
+### 基础模版
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -19,6 +21,54 @@ inline ll rd(){
 int main(){
     return 0;
 }
+```
+
+### vimrc
+
+```vim
+syntax on
+
+set ts=4
+
+set expandtab
+
+set autoindent
+
+set cindent
+
+set shiftwidth=4
+
+set nu
+
+set softtabstop=4
+
+set smartindent
+
+set showmatch
+
+set ruler
+
+set mouse=a
+
+inoremap <F1> <esc>:w<CR>
+
+inoremap <F5> <esc>:below term<CR>
+
+nmap <F1> :w<CR>
+
+nmap <F5> :below term<CR>
+
+colo habamax
+
+set title
+
+set shell=powershell
+
+set wim=list
+
+set backspace=indent,eol,start
+
+set nocompatible
 ```
 
 ## 数据结构
