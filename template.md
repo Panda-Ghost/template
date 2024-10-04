@@ -27,7 +27,7 @@ int main(){
 单点修 区间查
 
 ```cpp
-ll s[N<<2];
+ll s[N<<2], a[N];
 int M;
 
 ll f(ll x, ll y){
