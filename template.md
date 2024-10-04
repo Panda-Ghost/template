@@ -11,7 +11,6 @@
 单点修 区间查
 
 ```cpp
-
 ll s[N<<2];
 int M;
 
@@ -36,7 +35,7 @@ ll qrange(int l, int r, ll init){
 
 void edit(int x, ll v){
     for(s[x+=M]=v, x>>=1; x; x>>=1){
-        s[x]=f(s[2*x], s[2*x+1].val);
+        s[x]=f(s[2*x], s[2*x+1]);
     }
 }
 
