@@ -61,6 +61,27 @@ ll qpoint(int x){
 ```
 
 ### 珂朵莉树
+
 ```cpp
-auto split(int x) { auto it = odt.lower_bound(Node_t(x, 0, 0)); if (it != odt.end() && it->l == x) return it; --it; int l = it->l, r = it->r, v = it->v; odt.erase(it); odt.insert(Node_t(l, x - 1, v)); return odt.insert(Node_t(x, r, v)).first; }
+struct node{
+    int l, r;
+    mutable int v; 
+    bool operator<(const node& rhs) const { return l<rhs.l; } 
+};
+
+set<node> odt;
+typedef set<node>::iterator iter;
+
+iter split(ll p){
+    iter tmp=odt.lower_bound((node){p, 0, 0});
+    if(tmp!=odt.end()&&tmp->l==p) return tmp;
+    --tmp;
+    int tl=tmp->l, tr=tmp->r, tv=tmp->v;
+    odt.erase(tmp);
+    odt.insert((node){tl, p-1, tv});
+    return odt.insert((node){p, tr, tv}).first;
+}
+
+
+
 ```
