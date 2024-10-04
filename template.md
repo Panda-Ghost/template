@@ -103,6 +103,5 @@ ll qpow(ll a, ll x){
     return res;
 }
 
-ll inv(ll x){ return qpow(x, MOD-2); }
-
+ll inv(ll x){ return qpow(x, MOD-2); } // 模数为质数时
 ```
