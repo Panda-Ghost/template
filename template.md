@@ -168,6 +168,6 @@ void work(){
     }
     REPd(i, n, 1) REP(j, 1, i-1) b[j]-=a[j][i]*b[i], a[j][i]=0;
     // REP(i, 1, n) printf("%.2f\n", b[i]);
-    // b[1...n] 
+    // b[1...n] 保存 Ax=b 的解
 }
 ```
