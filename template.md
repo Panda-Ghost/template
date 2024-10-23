@@ -197,9 +197,11 @@ int lca(int x, int y){
 }
 ```
 
-## 网络流
+### 网络流
 
-+ 最大流
+不是我写的，但是看着还好
+
+#### 最大流
 
 ```cpp
 struct E {
@@ -272,7 +274,7 @@ struct Dinic {
 } DC;
 ```
 
-+ 费用流
+#### 费用流
 
 ```cpp
 struct E {
