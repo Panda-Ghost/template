@@ -535,8 +535,8 @@
           "alternativeHighlights": {}
         },
         "inline": {
-          "backgroundColour": "--code-background",
-          "textColour": "--code-normal",
+          "backgroundColour": "#F6F8FA00",
+          "textColour": "#000000",
           "activeTextColour": "--code-normal",
           "titleTextColour": "--code-comment"
         },
@@ -578,8 +578,8 @@
           "alternativeHighlights": {}
         },
         "inline": {
-          "backgroundColour": "--code-background",
-          "textColour": "--code-normal",
+          "backgroundColour": "#F6F8FA00",
+          "textColour": "#000000",
           "activeTextColour": "--code-normal",
           "titleTextColour": "--code-comment"
         },
