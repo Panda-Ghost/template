@@ -175,12 +175,12 @@ void work(){
 ## 图论
 
 ```cpp
-void dfs(int u, int fa) {
-    pa[u][0] = fa; dep[u] = dep[fa] + 1;
-    REP (i, 1, SP) pa[u][i] = pa[pa[u][i - 1]][i - 1];
-    for (int& v: G[u]) {
-        if (v == fa) continue;
-        dfs(v, u);
+void dfs(int x, int fa) {
+    pa[x][0]=fa; dep[x]=dep[fa]+1;
+    REP(i, 1, SP) pa[x][i]=pa[pa[x][i-1]][i-1];
+    for(int& v:g[x]){
+        if (v==fa) continue;
+        dfs(v, x);
     }
 }
 
