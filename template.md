@@ -187,7 +187,7 @@ void dfs(int x, int fa){
 
 int lca(int x, int y){
     if (dep[x]<dep[y]) swap(x, y);
-    int t = dep[x]-dep[y];
+    int t=dep[x]-dep[y];
     REP(i, 0, SP) if(t&(1<<i)) x=pa[x][i];
     REPd(i, SP-1, -1){
         int xx=pa[x][i], yy=pa[y][i];
