@@ -449,7 +449,7 @@
         "lineNumbers": true,
         "unwrapLines": false,
         "wrapLinesActive": false,
-        "curvature": 11
+        "curvature": 4
       },
       "gutter": {
         "highlight": true,
@@ -531,7 +531,7 @@
         "highlights": {
           "activeCodeblockLineColour": "--color-base-30",
           "activeEditorLineColour": "--color-base-20",
-          "defaultColour": "--text-highlight-bg",
+          "defaultColour": "#FFD00000",
           "alternativeHighlights": {}
         },
         "inline": {
@@ -574,7 +574,7 @@
         "highlights": {
           "activeCodeblockLineColour": "--color-base-30",
           "activeEditorLineColour": "--color-base-20",
-          "defaultColour": "--text-highlight-bg",
+          "defaultColour": "#FFD00000",
           "alternativeHighlights": {}
         },
         "inline": {
