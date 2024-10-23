@@ -508,8 +508,8 @@
           "textColour": "#000000"
         },
         "gutter": {
-          "backgroundColour": "--code-background",
-          "textColour": "--text-faint",
+          "backgroundColour": "#161B2200",
+          "textColour": "#000000",
           "activeTextColour": "--text-muted"
         },
         "header": {
@@ -551,8 +551,8 @@
           "textColour": "#000000"
         },
         "gutter": {
-          "backgroundColour": "--code-background",
-          "textColour": "--text-faint",
+          "backgroundColour": "#161B2200",
+          "textColour": "#000000",
           "activeTextColour": "--text-muted"
         },
         "header": {
