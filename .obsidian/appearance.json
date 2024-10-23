@@ -6,5 +6,6 @@
   "translucency": false,
   "showViewHeader": true,
   "theme": "moonstone",
-  "nativeMenus": true
+  "nativeMenus": true,
+  "baseFontSize": 18
 }
