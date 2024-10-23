@@ -531,7 +531,7 @@
         "highlights": {
           "activeCodeblockLineColour": "--color-base-30",
           "activeEditorLineColour": "--color-base-20",
-          "defaultColour": "#FFD00000",
+          "defaultColour": "#00000000",
           "alternativeHighlights": {}
         },
         "inline": {
@@ -574,7 +574,7 @@
         "highlights": {
           "activeCodeblockLineColour": "--color-base-30",
           "activeEditorLineColour": "--color-base-20",
-          "defaultColour": "#FFD00000",
+          "defaultColour": "#00000000",
           "alternativeHighlights": {}
         },
         "inline": {
