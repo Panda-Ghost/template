@@ -204,9 +204,11 @@ int lca(int x, int y){
 #### 最大流
 
 ```cpp
+constexpr ll INF=LLONG_MAX/2;
+
 struct E {
-    int to, cp;
-    E(int to, int cp): to(to), cp(cp) {}
+    int to; ll cp;
+    E(int to, ll cp): to(to), cp(cp) {}
 };
 
 struct Dinic {
@@ -223,7 +225,7 @@ struct Dinic {
         edges.clear(); m = 0;
     }
 
-    void addedge(int u, int v, int cap) {
+    void addedge(int u, int v, ll cap) {
         edges.emplace_back(v, cap);
         edges.emplace_back(u, 0);
         G[u].push_back(m++);
@@ -247,9 +249,9 @@ struct Dinic {
         return d[t];
     }
 
-    int DFS(int u, int cp) {
+    ll DFS(int u, ll cp) {
         if (u == t || !cp) return cp;
-        int tmp = cp, f;
+        ll tmp = cp, f;
         for (int& i = cur[u]; i < G[u].size(); i++) {
             E& e = edges[G[u][i]];
             if (d[u] + 1 == d[e.to]) {
@@ -263,8 +265,8 @@ struct Dinic {
         return tmp - cp;
     }
 
-    int go() {
-        int flow = 0;
+    ll go() {
+        ll flow = 0;
         while (BFS()) {
             memset(cur, 0, sizeof cur);
             flow += DFS(s, INF);
