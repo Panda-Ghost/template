@@ -197,3 +197,148 @@ int lca(int x, int y){
 }
 ```
 
+## 网络流
+
++ 最大流
+
+```cpp
+struct E {
+    int to, cp;
+    E(int to, int cp): to(to), cp(cp) {}
+};
+
+struct Dinic {
+    static const int M = 1E5 * 5;
+    int m, s, t;
+    vector<E> edges;
+    vector<int> G[M];
+    int d[M];
+    int cur[M];
+
+    void init(int n, int s, int t) {
+        this->s = s; this->t = t;
+        for (int i = 0; i <= n; i++) G[i].clear();
+        edges.clear(); m = 0;
+    }
+
+    void addedge(int u, int v, int cap) {
+        edges.emplace_back(v, cap);
+        edges.emplace_back(u, 0);
+        G[u].push_back(m++);
+        G[v].push_back(m++);
+    }
+
+    bool BFS() {
+        memset(d, 0, sizeof d);
+        queue<int> Q;
+        Q.push(s); d[s] = 1;
+        while (!Q.empty()) {
+            int x = Q.front(); Q.pop();
+            for (int& i: G[x]) {
+                E &e = edges[i];
+                if (!d[e.to] && e.cp > 0) {
+                    d[e.to] = d[x] + 1;
+                    Q.push(e.to);
+                }
+            }
+        }
+        return d[t];
+    }
+
+    int DFS(int u, int cp) {
+        if (u == t || !cp) return cp;
+        int tmp = cp, f;
+        for (int& i = cur[u]; i < G[u].size(); i++) {
+            E& e = edges[G[u][i]];
+            if (d[u] + 1 == d[e.to]) {
+                f = DFS(e.to, min(cp, e.cp));
+                e.cp -= f;
+                edges[G[u][i] ^ 1].cp += f;
+                cp -= f;
+                if (!cp) break;
+            }
+        }
+        return tmp - cp;
+    }
+
+    int go() {
+        int flow = 0;
+        while (BFS()) {
+            memset(cur, 0, sizeof cur);
+            flow += DFS(s, INF);
+        }
+        return flow;
+    }
+} DC;
+```
+
++ 费用流
+
+```cpp
+struct E {
+    int from, to, cp, v;
+    E() {}
+    E(int f, int t, int cp, int v) : from(f), to(t), cp(cp), v(v) {}
+};
+
+struct MCMF {
+    int n, m, s, t;
+    vector<E> edges;
+    vector<int> G[M];
+    bool inq[M];
+    int d[M], p[M], a[M];
+
+    void init(int _n, int _s, int _t) {
+        n = _n; s = _s; t = _t;
+        FOR (i, 0, n + 1) G[i].clear();
+        edges.clear(); m = 0;
+    }
+
+    void addedge(int from, int to, int cap, int cost) {
+        edges.emplace_back(from, to, cap, cost);
+        edges.emplace_back(to, from, 0, -cost);
+        G[from].push_back(m++);
+        G[to].push_back(m++);
+    }
+
+    bool BellmanFord(int &flow, int &cost) {
+        FOR (i, 0, n + 1) d[i] = INF;
+        memset(inq, 0, sizeof inq);
+        d[s] = 0, a[s] = INF, inq[s] = true;
+        queue<int> Q; Q.push(s);
+        while (!Q.empty()) {
+            int u = Q.front(); Q.pop();
+            inq[u] = false;
+            for (int& idx: G[u]) {
+                E &e = edges[idx];
+                if (e.cp && d[e.to] > d[u] + e.v) {
+                    d[e.to] = d[u] + e.v;
+                    p[e.to] = idx;
+                    a[e.to] = min(a[u], e.cp);
+                    if (!inq[e.to]) {
+                        Q.push(e.to);
+                        inq[e.to] = true;
+                    }
+                }
+            }
+        }
+        if (d[t] == INF) return false;
+        flow += a[t];
+        cost += a[t] * d[t];
+        int u = t;
+        while (u != s) {
+            edges[p[u]].cp -= a[t];
+            edges[p[u] ^ 1].cp += a[t];
+            u = edges[p[u]].from;
+        }
+        return true;
+    }
+
+    int go() {
+        int flow = 0, cost = 0;
+        while (BellmanFord(flow, cost));
+        return cost;
+    }
+} MM;
+```
+
