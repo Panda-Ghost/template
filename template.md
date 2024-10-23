@@ -4,7 +4,7 @@
 
 ### 基础模版
 
-```cpp
+```
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -25,7 +25,7 @@ int main(){
 
 ### vimrc
 
-```vim
+```
 syntax on
 set ts=4
 set expandtab
@@ -56,7 +56,7 @@ set nocompatible
 
 单点修 区间查
 
-```cpp
+```
 ll s[N<<2], a[N];
 int M;
 
@@ -92,7 +92,7 @@ ll qpoint(int x){
 
 ### 珂朵莉树
 
-```cpp
+```
 struct node{
     int l, r;
     mutable int v; 
@@ -120,7 +120,7 @@ iter split(ll p){
 
 ### 快速幂
 
-```cpp
+```
 const ll MOD=998244353; // 改模数
 
 ll qpow(ll a, ll x){
@@ -138,7 +138,7 @@ ll inv(ll x){ return qpow(x, MOD-2); } // 模数为质数时
 
 ### 高斯消元
 
-```cpp
+```
 const int N=110;
 ll n;
 double a[N][N], b[N];
@@ -176,7 +176,7 @@ void work(){
 
 ### 倍增
 
-```cpp
+```
 void dfs(int x, int fa){
     pa[x][0]=fa; dep[x]=dep[fa]+1;
     REP(i, 1, SP) pa[x][i]=pa[pa[x][i-1]][i-1];
@@ -205,7 +205,7 @@ int lca(int x, int y){
 
 其中 `ll` 是我改的，不敢保证有没有漏改，但是过了洛谷模版题
 
-```cpp
+```
 constexpr ll INF=LLONG_MAX/2;
 
 struct E {
@@ -280,7 +280,7 @@ struct Dinic {
 
 #### 费用流
 
-```cpp
+```
 struct E {
     int from, to, cp, v;
     E() {}
