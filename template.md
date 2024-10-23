@@ -175,22 +175,21 @@ void work(){
 ## 图论
 
 ```cpp
-void dfs(int x, int fa) {
+void dfs(int x, int fa){
     pa[x][0]=fa; dep[x]=dep[fa]+1;
     REP(i, 1, SP) pa[x][i]=pa[pa[x][i-1]][i-1];
-    for(int& v:g[x]){
-        if (v==fa) continue;
+    for(int& v:g[x]) if(v!=fa){
         dfs(v, x);
     }
 }
 
-int lca(int u, int v) {
-    if (dep[u] < dep[v]) swap(u, v);
-    int t = dep[u] - dep[v];
-    FOR (i, 0, SP) if (t & (1 << i)) u = pa[u][i];
-    FORD (i, SP - 1, -1) {
-        int uu = pa[u][i], vv = pa[v][i];
-        if (uu != vv) { u = uu; v = vv; }
+int lca(int x, int y){
+    if (dep[x]<dep[y]) swap(x, y);
+    int t = dep[x]-dep[y];
+    REP(i, 0, SP) if(t&(1<<i)) x=pa[x][i];
+    REPd(i, SP-1, -1){
+        int xx=pa[x][i], yy=pa[y][i];
+        if (xx!=yy) { x=xx; v=vv; }
     }
     return u == v ? u : pa[u][0];
 }
