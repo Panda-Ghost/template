@@ -449,7 +449,7 @@
         "lineNumbers": true,
         "unwrapLines": false,
         "wrapLinesActive": false,
-        "curvature": 4
+        "curvature": 8
       },
       "gutter": {
         "highlight": true,
