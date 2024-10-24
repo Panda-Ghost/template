@@ -363,7 +363,7 @@ struct MCMF {
 
 ### 二分图最大匹配
 
-ps. 建单向图（即只有左部指向右部的bian）
+ps. 建单向图（即只有左部指向右部的边）
 
 ```
 struct MaxMatch {
