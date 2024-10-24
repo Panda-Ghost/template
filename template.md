@@ -127,6 +127,8 @@ iter split(ll p){
 
 ### FHQ-Treap
 
+以模版文艺平衡树为例
+
 ```
 int n, m, clk, rt;
 struct node{
