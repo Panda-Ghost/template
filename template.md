@@ -417,12 +417,12 @@ void tarjan(int u) {
         } else if (in[v]) low[u] = min(low[u], dfn[v]);
     }
     if (dfn[u] == low[u]) {
+        ++B;
         while (1) {
             int x = st[--p]; in[x] = false;
             bl[x] = B; bcc[B].push_back(x);
             if (x == u) break;
         }
-        ++B;
     }
 }
 ```
