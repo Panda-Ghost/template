@@ -398,3 +398,5 @@ struct MaxMatch {
     }
 } MM;
 ```
+
+### Tarjan 强连通分量缩点
