@@ -127,7 +127,7 @@ iter split(ll p){
     return odt.insert((node){p, tr, tv}).first;
 }
 
-// 【修改 & 查询】注意 split 顺序
+// 修改和查询注意 split 顺序
 // iter itr=split(r+1), itl=split(l);
 ```
 

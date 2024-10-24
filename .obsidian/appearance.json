@@ -1,7 +1,7 @@
 {
   "cssTheme": "Minimal",
   "textFontFamily": "Georgia,JetBrainsMono Nerd Font Mono,STFangsong,PingFang HK",
-  "monospaceFontFamily": "Courier Prime,JetBrainsMono Nerd Font Mono",
+  "monospaceFontFamily": "Courier Prime,JetBrainsMono Nerd Font Mono,STFangsong",
   "interfaceFontFamily": "PingFang HK",
   "translucency": false,
   "showViewHeader": true,
