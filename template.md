@@ -215,7 +215,7 @@ int lca(int x, int y){
 #### 最大流
 
 ```
-constexpr ll INF=LLONG_MAX/2;
+constexpr ll INF = LLONG_MAX / 2;
 
 struct E {
     int to; ll cp;
@@ -290,7 +290,7 @@ struct Dinic {
 #### 费用流
 
 ```
-constexpr ll INF=LLONG_MAX/2;
+constexpr ll INF = LLONG_MAX / 2;
 
 struct E {
     int from, to; ll cp, v;
@@ -299,7 +299,7 @@ struct E {
 };
 
 struct MCMF {
-    static const int M=1E5 * 5;
+    static const int M = 1E5 * 5;
     int n, m, s, t;
     vector<E> edges;
     vector<int> G[M];
