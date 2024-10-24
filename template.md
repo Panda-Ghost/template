@@ -371,7 +371,7 @@ struct MaxMatch {
 
     void init(int n) {
         this->n = n;
-        FOR (i, 0, n + 1) G[i].clear();
+        REP (i, 0, n + 1) G[i].clear();
         memset(left, -1, sizeof left);
         memset(vis, -1, sizeof vis);
     }
