@@ -1,6 +1,9 @@
-# 模版
+# ACM模版
 
-by PandaGhos
+by PandaGhost
+
+---
+
 ```table-of-contents
 title: 
 style: nestedList # TOC style (nestedList|nestedOrderedList|inlineFirstLevel)
@@ -9,6 +12,8 @@ maxLevel: 0 # Include headings up to the specified level
 includeLinks: false # Make headings clickable
 debugInConsole: false # Print debug info in Obsidian console
 ```
+
+---
 
 ## 写在前面
 
