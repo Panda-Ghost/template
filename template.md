@@ -42,20 +42,10 @@ int main(){
 
 ```
 syntax on
-set ts=4
-set expandtab
-set autoindent
-set cindent
-set shiftwidth=4
-set nu
-set softtabstop=4
-set smartindent
-set showmatch
-set ruler
-set mouse=a
-inoremap <F1> <esc>:w<CR>
-inoremap <F5> <esc>:below term<CR>
-nmap <F1> :w<CR>
+set ts=4 expandtab autoindent cindent shiftwidth=4 nu softtabstop=4 smartindent showmatch ruler mouse=a
+ino <F1> <esc>:w<CR>
+ino <F5> <esc>:below term<CR>
+nno <F1> :w<CR>
 nmap <F5> :below term<CR>
 colo habamax
 set title
