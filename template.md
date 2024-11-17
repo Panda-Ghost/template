@@ -42,7 +42,7 @@ int main(){
 
 ```
 syntax on
-set ts=4 et ai cindent shiftwidth=4 nu sts=4 si showmatch ruler mouse=a title wim=list
+set ts=4 et ai cindent shiftwidth=4 nu sts=4 si sm ru mouse=a title wim=list
 im <F1> <esc>:w<CR>
 im <F5> <esc>:bel term<CR>
 nn <F1> :w<CR>
