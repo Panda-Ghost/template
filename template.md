@@ -47,10 +47,10 @@ ino <F1> <esc>:w<CR>
 ino <F5> <esc>:below term<CR>
 nno <F1> :w<CR>
 nno <F5> :below term<CR>
-colo habamax
-set shell=powershell
-set backspace=indent,eol,start
-set nocompatible
+" colo habamax
+" set shell=powershell
+" set backspace=indent,eol,start
+" set nocompatible
 ```
 
 ## 数据结构
