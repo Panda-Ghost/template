@@ -43,10 +43,10 @@ int main(){
 ```
 syntax on
 set ts=4 expandtab autoindent cindent shiftwidth=4 nu softtabstop=4 smartindent showmatch ruler mouse=a title wim=list
-ino <F1> <esc>:w<CR>
-ino <F5> <esc>:below term<CR>
-nno <F1> :w<CR>
-nno <F5> :below term<CR>
+im <F1> <esc>:w<CR>
+im <F5> <esc>:below term<CR>
+nn <F1> :w<CR>
+nn <F5> :below term<CR>
 
 " set shell=powershell
 " set backspace=indent,eol,start
