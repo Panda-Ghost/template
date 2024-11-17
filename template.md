@@ -42,7 +42,7 @@ int main(){
 
 ```
 syntax on
-set ts=4 expandtab autoindent cindent shiftwidth=4 nu softtabstop=4 smartindent showmatch ruler mouse=a title wim=list
+set ts=4 et ai cindent shiftwidth=4 nu softtabstop=4 smartindent showmatch ruler mouse=a title wim=list
 im <F1> <esc>:w<CR>
 im <F5> <esc>:bel term<CR>
 nn <F1> :w<CR>
