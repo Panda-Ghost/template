@@ -42,15 +42,13 @@ int main(){
 
 ```
 syntax on
-set ts=4 expandtab autoindent cindent shiftwidth=4 nu softtabstop=4 smartindent showmatch ruler mouse=a
+set ts=4 expandtab autoindent cindent shiftwidth=4 nu softtabstop=4 smartindent showmatch ruler mouse=a title wim=list
 ino <F1> <esc>:w<CR>
 ino <F5> <esc>:below term<CR>
 nno <F1> :w<CR>
-nmap <F5> :below term<CR>
+nno <F5> :below term<CR>
 colo habamax
-set title
 set shell=powershell
-set wim=list
 set backspace=indent,eol,start
 set nocompatible
 ```
