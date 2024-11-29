@@ -142,6 +142,7 @@ void up(int o){ t[o].sz=t[t[o].ls].sz+t[t[o].rs].sz+1; }
 void split(int o, int x, int &L, int &R){
     if(o==0) return L=R=0, void(); down(o);
     if(t[t[o].ls].sz+1>=x) R=o, split(t[o].ls, x, L, t[o].ls);
+    // 
     else L=o, split(t[o].rs, x-t[t[o].ls].sz-1, t[o].rs, R);
     up(o);
 }
