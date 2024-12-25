@@ -1,0 +1,134 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{listings}
+\usepackage{ctex}
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage\ /\ \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\textasteriskcentered}{*} % fuck !
+
+\geometry{a4paper, top=3cm, bottom=3.5cm, left=3cm, right=3cm}
+
+\newfontfamily\cp[
+    Path=font/, 
+    Extension=.ttf,
+    BoldFont={* Bold}, 
+    ItalicFont={* Italic},
+    UprightFont={*}
+]{Courier Prime}
+
+\newfontfamily\jbmn[
+    Path=font/, 
+    Extension=.ttf,
+    BoldFont={*-Bold}, 
+    ItalicFont={*-Italic},
+    UprightFont={*-Regular}
+]{JetBrainsMonoNL}
+
+\newcommand{\codefont}{\cp}
+
+\lstset{
+    basicstyle          =   \codefont,          % 基本代码风格
+    keywordstyle        =   \bfseries,          % 关键字风格
+    commentstyle        =   \codefont\itshape,  % 注释的风格，斜体
+    stringstyle         =   \codefont,  % 字符串风格
+    columns             =   fixed,
+    numbers             =   left,   % 行号的位置在左边
+    showspaces          =   false,  % 是否显示空格，显示了有点乱，所以不现实了
+    numberstyle         =   \zihao{-5}\ttfamily,    % 行号的样式，小五号，tt等宽字体
+    showstringspaces    =   false,
+    captionpos          =   t,      % 这段代码的名字所呈现的位置，t指的是top上面
+    frame               =   l,   % 显示边框
+    breaklines          =   true,
+}
+
+\lstdefinelanguage{vim}{
+    morecomment         =   [l]{\"},
+}
+
+\title{\textbf{Template}}
+\author{Billy Wang}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+\tableofcontents
+\newpage
+
+\section{写在前面}
+
+\subsection{基础模版}
+
+\lstinputlisting[language=C++]{./code/1/1.1-demo.cpp}
+
+\subsection{vimrc}
+
+\lstinputlisting[language=vim]{./code/1/1.2-vimrc}
+
+\section{数据结构}
+
+\subsection{zkw 线段树}
+
+单点修 区间查
+
+\lstinputlisting[language=C++]{./code/2/2.1-zkw.cpp}
+
+\subsection{珂朵莉树}
+
+\lstinputlisting[language=C++]{./code/2/2.2-odt.cpp}
+
+\subsection{FHQ-Treap}
+
+以模版文艺平衡树为例
+
+\lstinputlisting[language=C++]{./code/2/2.3-fhq.cpp}
+
+\section{数学}
+
+\subsection{快速幂}
+
+\lstinputlisting[language=C++]{./code/3/3.1-qpow.cpp}
+
+\subsection{高斯消元}
+
+\lstinputlisting[language=C++]{./code/3/3.2-elimination.cpp}
+
+\section{图论}
+
+\subsection{倍增}
+
+\lstinputlisting[language=C++]{./code/4/4.1-lca.cpp}
+
+\subsection{网络流}
+
+不是我写的，但是看着还好
+
+其中 \lstinline{ll} 是我改的，不敢保证有没有漏改，但是过了洛谷模版题
+
+\subsubsection{最大流}
+
+\lstinputlisting[language=C++]{./code/4/4.2.1-dinic.cpp}
+
+\subsubsection{费用流}
+
+\lstinputlisting[language=C++]{./code/4/4.2.2-mcmf.cpp}
+
+\subsection{二分图最大匹配}
+
+ps. 建单向图（即只有左部指向右部的边）
+
+\lstinputlisting[language=C++]{./code/4/4.3-maxmatch.cpp}
+
+\subsection{Tarjan 强连通分量缩点}
+
+\lstinputlisting[language=C++]{./code/4/4.4-tarjanscc.cpp}
+
+\end{document}
