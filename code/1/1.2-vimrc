@@ -14,5 +14,4 @@ nn <C-M> :Mk<CR>
 " set shell=powershell
 " set backspace=indent,eol,start
 " set nocompatible
-
 " set sh=powershell bs=indent,eol,start nocp
