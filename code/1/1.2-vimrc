@@ -11,7 +11,7 @@ set mp=gnumake
 com! Mk sil mak | uns redr! | cw
 nn <C-M> :Mk<CR>
 
-" set shell=powershell
-" set backspace=indent,eol,start
-" set nocompatible
+"   set shell=powershell
+"   set backspace=indent,eol,start
+"   set nocompatible
 " set sh=powershell bs=indent,eol,start nocp
