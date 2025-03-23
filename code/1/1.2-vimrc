@@ -8,3 +8,5 @@ nn <F5> :bel term<CR>
 " set shell=powershell
 " set backspace=indent,eol,start
 " set nocompatible
+
+
