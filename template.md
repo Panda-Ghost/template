@@ -42,23 +42,21 @@ int main(){
 
 ```
 syntax on
-set ts=4 et ai cindent shiftwidth=4 nu sts=4 si sm ru mouse=a title wim=list
-im <F1> <esc>:w<CR>
-im <F5> <esc>:bel term<CR>
-nn <F1> :w<CR>
-nn <F5> :bel term<CR>
-
-" set shell=powershell
-" set backspace=indent,eol,start
-" set nocompatible
-
-syntax on
 set ts=4 et ai cin sw=4 nu sts=4 sm ru mouse=a title wim=list
+" im <F1> <esc>:w<CR>
+im <F5> <esc>:bel ter<CR>
+" nn <F1> :w<CR>
+nn <F5> :bel ter<CR>
+
 im <C-S> <esc>:w<CR>
 nn <C-S> :w<CR>
 set mp=gnumake
 com! Mk sil mak | uns redr! | cw
 nn <C-M> :Mk<CR>
+
+"   set shell=powershell
+"   set backspace=indent,eol,start
+"   set nocompatible
 " set sh=powershell bs=indent,eol,start nocp
 ```
 
