@@ -1,0 +1,142 @@
+{
+    //------------------------------LaTeX 配置----------------------------------
+
+    // 右键菜单
+    "latex-workshop.showContextMenu": true,
+
+    // 从使用的包中自动补全命令和环境
+    "latex-workshop.intellisense.package.enabled": true,
+
+    // 编译出错时设置是否弹出气泡设置
+    "latex-workshop.message.error.show": false,
+    "latex-workshop.message.warning.show": false,
+
+    // 输出路径
+    "latex-workshop.latex.outDir": "./build",
+
+    // 编译工具和命令
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "--output-directory=%OUTDIR%",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "--output-directory=%OUTDIR%",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "--output-directory=%OUTDIR%",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%OUTDIR%/%DOCFILE%",
+                // "--output-directory=%OUTDIR%",
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "XeLaTeX",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "PDFLaTeX",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "BibTeX",
+            "tools": [
+                "bibtex"
+            ]
+        },
+        {
+            "name": "LaTeXmk",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "xelatex -> bibtex -> xelatex*2",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "pdflatex -> bibtex -> pdflatex*2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+    ],
+    
+    // 文件清理。此属性必须是字符串数组
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        // "*.synctex.gz"
+    ],
+
+    // 设置为 onBuilt 在构建成功后清除辅助文件
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+
+    // 使用第一个编译组合
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    
+    // 设置是否自动编译
+    "latex-workshop.latex.autoBuild.run": "never",
+
+    // 用于反向同步的内部查看器的键绑定。ctrl/cmd +点击(默认)或双击
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+}
