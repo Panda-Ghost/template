@@ -73,6 +73,13 @@
             ]
         },
         {
+            "name": "XeLaTeX*2",
+            "tools": [
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
             "name": "BibTeX",
             "tools": [
                 "bibtex"
