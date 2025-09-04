@@ -146,3 +146,143 @@
 \noindent \lstinline{ranges::ends_with} (C++23)
 
 检查⼀个范围是否终于另⼀范围 (算法函数对象)
+
+\noindent \textbf{折叠操作} (C++23 起)
+
+\textit{在标头 \lstinline{<algorithm>} 定义}
+
+\noindent \lstinline{ranges::fold_left} (C++23)
+
+左折叠范围中元素 (算法函数对象)
+
+\noindent \lstinline{ranges::fold_left_first} (C++23)
+
+以⾸元素为初值左折叠范围中元素 (算法函数对象)
+
+\noindent \lstinline{ranges::fold_right} (C++23)
+
+右折叠范围中元素 (算法函数对象)
+
+\noindent \lstinline{ranges::fold_right_last} (C++23)
+
+以末元素为初值右折叠范围中元素 (算法函数对象)
+
+\noindent \lstinline{ranges::fold_left_with_iter} (C++23) 
+
+左折叠范围中元素，并返回 \lstinline{pair}（迭代器，值） (算法函数对象)
+
+\noindent \lstinline{ranges::fold_left_first_with_iter} (C++23) 
+
+以⾸元素为初值左折叠范围中元素，并返回 \lstinline{pair}（迭代器，optional） (算法函数对象)
+
+\textbf{修改序列的操作}
+
+\noindent \textbf{复制操作} 
+
+\textit{在标头 \lstinline{<algorithm>} 定义}
+
+\noindent \lstinline{copy}
+
+\noindent \lstinline{copy_if} (C++11)
+
+复制范围中元素到新位置 (函数模板)
+
+\noindent \lstinline{ranges::copy} (C++20)
+
+\noindent \lstinline{ranges::copy_if} (C++20)
+
+复制范围中元素到新位置 (算法函数对象)
+
+\noindent \lstinline{copy_n} (C++11)
+
+复制若⼲元素到新位置 (函数模板)
+
+\noindent \lstinline{ranges::copy_n} (C++20)
+
+复制若⼲元素到新位置 (算法函数对象)
+
+\noindent \lstinline{copy_backward} 
+
+从后往前复制范围中元素 (函数模板)
+
+\noindent \lstinline{ranges::copy_backward} (C++20)
+
+从后往前复制范围中元素 (算法函数对象)
+
+\noindent \lstinline{move} (C++11)
+
+将范围中元素移到新位置 (函数模板)
+
+\noindent \lstinline{ranges::move} (C++20)
+
+将范围中元素移到新位置 (算法函数对象)
+
+\noindent \lstinline{move_backward} (C++11)
+
+从后往前将范围中元素移到新位置 (函数模板)
+
+\noindent \lstinline{ranges::move_backward} (C++20)
+
+从后往前将范围中元素移到新位置 (算法函数对象)
+
+\noindent \textbf{交换操作} 
+
+\textit{在标头 \lstinline{<algorithm>} 定义 (C++11 前)}
+
+\textit{在标头 \lstinline{<utility>} 定义 (C++11 起)}
+
+\textit{在标头 \lstinline{<string_view>} 定义}
+
+\noindent \lstinline{swap} 
+
+\textit{在标头 \lstinline{<algorithm>} 定义}
+
+交换两个对象的值 (函数模板)
+
+\noindent \lstinline{swap_ranges} 
+
+交换两个范围的元素 (函数模板)
+
+\noindent \lstinline{ranges::swap_ranges} (C++20) 
+
+交换两个范围的元素 (算法函数对象)
+
+\noindent \lstinline{iter_swap} 
+
+交换两个迭代器所指向的元素 (函数模板)
+\noindent \lstinline{
+\noindent \textbf{变换操作}
+
+\textit{在标头 \lstinline{<algorithm>} 定义}
+
+\noindent \lstinline{transform}
+
+应⽤函数到元素范围，并在⽬标范围存储结果 (函数模板)
+
+\noindent \lstinline{ranges::transform} (C++20)
+
+应⽤函数到元素范围 (算法函数对象)
+
+\noindent \lstinline{replace}
+
+\noindent \lstinline{replace_if}
+
+替换所有满⾜特定条件的值为另⼀个值 (函数模板)
+
+\noindent \lstinline{ranges::replace} (C++20)
+
+\noindent \lstinline{ranges::replace_if} (C++20)
+
+替换所有满⾜特定条件的值为另⼀个值 (算法函数对象)
+
+\noindent \lstinline{replace_copy}
+
+\noindent \lstinline{replace_copy_if}
+
+复制范围，并将满⾜特定条件的元素替换为另⼀个值 (函数模板)
+
+\noindent \lstinline{ranges::replace_copy} (C++20)
+
+\noindent \lstinline{ranges::replace_copy_if} (C++20)
+
+复制范围，并将满⾜特定条件的元素替换为另⼀个值 (算法函数对象)
