@@ -18,7 +18,7 @@
     "latex-workshop.latex.tools": [
         {
             "name": "xelatex",
-            "command": "/Library/TeX/texbin/xelatex",
+            "command": "xelatex",
             "args": [
                 "-synctex=1",
                 "-interaction=nonstopmode",
@@ -29,7 +29,7 @@
         },
         {
             "name": "pdflatex",
-            "command": "/Library/TeX/texbin/pdflatex",
+            "command": "pdflatex",
             "args": [
                 "-synctex=1",
                 "-interaction=nonstopmode",
@@ -40,7 +40,7 @@
         },
         {
             "name": "latexmk",
-            "command": "/Library/TeX/texbin/latexmk",
+            "command": "latexmk",
             "args": [
                 "-synctex=1",
                 "-interaction=nonstopmode",
@@ -52,7 +52,7 @@
         },
         {
             "name": "bibtex",
-            "command": "/Library/TeX/texbin/bibtex",
+            "command": "bibtex",
             "args": [
                 "%OUTDIR%/%DOCFILE%",
                 // "--output-directory=%OUTDIR%",

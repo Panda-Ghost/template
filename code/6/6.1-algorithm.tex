@@ -250,7 +250,7 @@
 \noindent \lstinline{iter_swap} 
 
 交换两个迭代器所指向的元素 (函数模板)
-\noindent \lstinline{
+
 \noindent \textbf{变换操作}
 
 \textit{在标头 \lstinline{<algorithm>} 定义}
@@ -286,3 +286,373 @@
 \noindent \lstinline{ranges::replace_copy_if} (C++20)
 
 复制范围，并将满⾜特定条件的元素替换为另⼀个值 (算法函数对象)
+
+\noindent \textbf{生成操作}
+
+\textit{在标头 \lstinline{<algorithm>} 定义}
+
+\noindent \lstinline{fill}
+
+以复制的⽅式赋给定值到范围中所有元素 (函数模板)
+
+\noindent \lstinline{ranges::fill} (C++20)
+
+赋给定值到范围中元素 (算法函数对象)
+
+\noindent \lstinline{fill_n}
+
+以复制的⽅式赋给定值到范围中 N 个元素 (函数模板)
+
+\noindent \lstinline{ranges::fill_n} (C++20)
+
+赋给定值到若⼲元素 (算法函数对象)
+
+\noindent \lstinline{generate}
+
+赋连续函数调⽤结果到范围中所有元素 (函数模板)
+
+\noindent \lstinline{ranges::generate} (C++20)
+
+将函数结果保存到范围中 (算法函数对象)
+
+\noindent \lstinline{generate_n}
+
+赋连续函数调⽤结果到范围中 N 个元素 (函数模板)
+
+\noindent \lstinline{ranges::generate_n} (C++20)
+
+保存 N 次函数应⽤的结果 (算法函数对象)
+
+\noindent \textbf{移除操作}
+
+\textit{在标头 \lstinline{<algorithm>} 定义}
+
+
+\noindent \lstinline{remove}
+
+\noindent \lstinline{remove_if}
+
+移除满⾜特定条件的元素 (函数模板)
+
+\noindent \lstinline{ranges::remove} (C++20)
+
+\noindent \lstinline{ranges::remove_if} (C++20)
+
+移除满⾜特定条件的元素 (算法函数对象)
+
+\noindent \lstinline{remove_copy}
+
+\noindent \lstinline{remove_copy_if}
+
+复制范围并忽略满⾜特定条件的元素 (函数模板)
+
+\noindent \lstinline{ranges::remove_copy} (C++20)
+
+\noindent \lstinline{ranges::remove_copy_if} (C++20)
+
+复制范围并忽略满⾜特定条件的元素 (算法函数对象)
+
+\noindent \lstinline{unique}
+
+移除范围中连续重复元素 (函数模板)
+
+\noindent \lstinline{ranges::unique} (C++20)
+
+移除范围中连续重复元素 (算法函数对象)
+
+\noindent \lstinline{unique_copy}
+
+创建某范围的不含连续重复元素的副本 (函数模板)
+
+\noindent \lstinline{ranges::unique_copy} (C++20)
+
+创建某范围的不含连续重复元素的副本 (算法函数对象)
+
+
+\noindent \textbf{顺序变更操作}
+
+\textit{在标头 \lstinline{<algorithm>} 定义}
+
+
+\noindent \lstinline{reverse}
+
+逆转范围中的元素顺序 (函数模板)
+
+\noindent \lstinline{ranges::reverse} (C++20)
+
+逆转范围中的元素顺序 (算法函数对象)
+
+\noindent \lstinline{reverse_copy} 
+
+创建范围的逆向副本 (函数模板)
+
+\noindent \lstinline{ranges::reverse_copy} (C++20) 
+
+创建范围的逆向副本 (算法函数对象)
+
+\noindent \lstinline{rotate} 
+
+旋转范围中的元素顺序 (函数模板)
+
+\noindent \lstinline{ranges::rotate} (C++20)
+
+旋转范围中的元素顺序 (算法函数对象)
+
+\noindent \lstinline{rotate_copy}
+
+复制并旋转元素范围 (函数模板)
+
+\noindent \lstinline{ranges::rotate_copy} (C++20)
+
+复制并旋转元素范围 (算法函数对象)
+
+\noindent \lstinline{shift_left} (C++20)
+
+\noindent \lstinline{shift_right} (C++20) 
+
+迁移范围中元素 (函数模板)
+
+\noindent \lstinline{ranges::shift_left} (C++23)
+
+\noindent \lstinline{ranges::shift_right} (C++23)
+
+迁移范围中元素 (算法函数对象)
+
+\noindent \lstinline{random_shuffle} (C++17 前)
+
+\noindent \lstinline{shuffle} (C++11)
+
+随机重排范围中元素 (函数模板)
+
+\noindent \lstinline{ranges::shuffle} (C++20)
+
+随机重排范围中元素 (算法函数对象)
+
+\noindent \textbf{采样操作}
+
+\textit{在标头 \lstinline{<algorithm>} 定义}
+
+\noindent \lstinline{sample} (C++17)
+
+从序列中随机选择 N 个元素 (函数模板)
+
+\noindent \lstinline{ranges::sample} (C++20)
+
+从序列中随机选择 N 个元素 (算法函数对象)
+
+\textbf{排序和相关操作}
+
+\noindent \textbf{要求}
+
+部分算法要求由实参表示的序列“已排序”或“已划分”。未满⾜要求时⾏为未定义。
+
+序列 \lstinline{[start, finish)} 在满⾜以下条件时已按表达式 \lstinline{f(e)} 划分：存在⼀个整数 \lstinline{n}，使得对于 \lstinline{[0, std::distance(start, finish))} 中的所有整数 \lstinline{i}， \lstinline{f(*(start + i))} 当且仅当 \lstinline{i < n} 时是 \lstinline{true}。
+
+\noindent \textbf{划分操作}
+
+\textit{在标头 \lstinline{<algorithm>} 定义}
+
+
+\noindent \lstinline{is_partitioned} (C++11)
+
+判断范围是否已按给定谓词划分 (函数模板)
+
+\noindent \lstinline{ranges::is_partitioned} (C++20)
+
+判断范围是否已按给定谓词划分 (算法函数对象)
+
+\noindent \lstinline{partition} 
+
+将范围中元素分为两组 (函数模板)
+
+\noindent \lstinline{ranges::partition} (C++20)
+
+将范围中元素分为两组 (算法函数对象)
+
+\noindent \lstinline{partition_copy} (C++11)
+
+复制范围并将元素分为两组 (函数模板)
+
+\noindent \lstinline{ranges::partition_copy} (C++20)
+
+复制范围并将元素分为两组 (算法函数对象)
+
+\noindent \lstinline{stable_partition}
+
+将元素分为两组，同时保留其相对顺序 (函数模板)
+
+\noindent \lstinline{ranges::stable_partition} (C++20)
+
+将元素分为两组，同时保留其相对顺序 (算法函数对象)
+
+\noindent \lstinline{partition_point} (C++11)
+
+定位已划分范围的划分点 (函数模板)
+
+\noindent \lstinline{ranges::partition_point} (C++20)
+
+定位已划分范围的划分点 (算法函数对象)
+
+\noindent \textbf{排序操作}
+
+\textit{在标头 \lstinline{<algorithm>} 定义}
+
+
+\noindent \lstinline{sort}
+
+将范围按升序排序 (函数模板)
+
+\noindent \lstinline{ranges::sort} (C++20)
+
+将范围按升序排序 (算法函数对象)
+
+\noindent \lstinline{stable_sort}
+
+将范围中元素排序，同时保持相等元之间的顺序 (函数模板)
+
+\noindent \lstinline{ranges::stable_sort} (C++20)
+
+将范围中元素排序，同时保持相等元之间的顺序 (算法函数对象)
+
+\noindent \lstinline{partial_sort}
+
+将范围中前 N 个元素排序 (函数模板)
+
+\noindent \lstinline{ranges::partial_sort} (C++20)
+
+将范围中前 N 个元素排序 (算法函数对象)
+
+\noindent \lstinline{partial_sort_copy}
+
+复制范围中元素并部分排序 (函数模板)
+
+\noindent \lstinline{ranges::partial_sort_copy} (C++20)
+
+复制范围中元素并部分排序 (算法函数对象)
+
+\noindent \lstinline{is_sorted} (C++11)
+
+检查范围是否已按升序排列 (函数模板)
+
+\noindent \lstinline{ranges::is_sorted} (C++20)
+
+检查范围是否已按升序排列 (算法函数对象)
+
+\noindent \lstinline{is_sorted_until} (C++11)
+
+找出最⼤的有序⼦范围 (函数模板)
+
+\noindent \lstinline{ranges::is_sorted_until} (C++20)
+
+找出最⼤的有序⼦范围 (算法函数对象)
+
+\noindent \lstinline{nth_element}
+
+将给定范围部分排序，确保其按给定元素划分 (函数模板)
+
+\noindent \lstinline{ranges::nth_element} (C++20)
+
+将给定范围部分排序，确保其按给定元素划分 (算法函数对象)
+
+\noindent \textbf{二分搜素操作（在已划分范围上）}
+
+\textit{在标头 \lstinline{<algorithm>} 定义}
+
+
+\noindent \lstinline{lower_bound}
+
+返回⾸个不⼩于给定值的元素的迭代器 (函数模板)
+
+\noindent \lstinline{ranges::lower_bound} (C++20)
+
+返回⾸个不⼩于给定值的元素的迭代器 (算法函数对象)
+
+\noindent \lstinline{upper_bound}
+
+返回⾸个⼤于给定值的元素的迭代器 (函数模板)
+
+\noindent \lstinline{ranges::upper_bound} (C++20)
+
+返回⾸个⼤于给定值的元素的迭代器 (算法函数对象)
+
+\noindent \lstinline{equal_range}
+
+返回匹配特定键值的元素范围 (函数模板)
+
+\noindent \lstinline{ranges::equal_range} (C++20)
+
+返回匹配特定键值的元素范围 (算法函数对象)
+
+\noindent \lstinline{binary_search} 
+
+判断元素是否在偏序范围中 (函数模板)
+
+\noindent \lstinline{ranges::binary_search} (C++20)
+
+判断元素是否在偏序范围中 (算法函数对象)
+
+
+\noindent \textbf{集合操作（在已排序范围上）}
+
+\textit{在标头 \lstinline{<algorithm>} 定义}
+
+
+\noindent \lstinline{includes}
+
+当⼀个序列是另⼀个的⼦序列时返回 \lstinline{true} (函数模板)
+
+\noindent \lstinline{ranges::includes} (C++20) 
+
+当⼀个序列是另⼀个的⼦序列时返回 \lstinline{true} (算法函数对象)
+
+\noindent \lstinline{set_union} 
+
+计算两个集合的并集 (函数模板)
+
+\noindent \lstinline{ranges::set_union} (C++20) 
+
+计算两个集合的并集 (算法函数对象)
+
+\noindent \lstinline{set_intersection} 
+
+计算两个集合的交集 (函数模板)
+
+\noindent \lstinline{ranges::set_intersection} (C++20) 
+
+计算两个集合的交集 (算法函数对象)
+
+\noindent \lstinline{set_difference} 
+
+计算两个集合的差集 (函数模板)
+
+\noindent \lstinline{ranges::set_difference} (C++20) 
+
+计算两个集合的差集 (算法函数对象)
+
+\noindent \lstinline{set_symmetric_difference}
+
+计算两个集合的对称差 (函数模板)
+
+\noindent \lstinline{ranges::set_symmetric_difference} (C++20)
+
+计算两个集合的对称差 (算法函数对象)
+
+\noindent \textbf{归并操作（在已排序范围上）}
+
+\textit{在标头 \lstinline{<algorithm>} 定义}
+
+\noindent \lstinline{merge}
+
+合并两个有序范围 (函数模板)
+
+\noindent \lstinline{ranges::merge} (C++20)
+
+合并两个有序范围 (算法函数对象)
+
+\noindent \lstinline{inplace_merge}
+
+就地合并两个有序范围 (函数模板)
+
+\noindent \lstinline{ranges::inplace_merge} (C++20)
+
+就地合并两个有序范围 (算法函数对象)
