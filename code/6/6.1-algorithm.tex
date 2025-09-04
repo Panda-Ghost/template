@@ -656,3 +656,218 @@
 \noindent \lstinline{ranges::inplace_merge} (C++20)
 
 就地合并两个有序范围 (算法函数对象)
+
+\noindent \textbf{堆操作}
+
+(C++20 前) 随机访问范围 \lstinline{[first, last)} 在满⾜以下条件时是⼀个关于⽐较器 \lstinline{comp} 的堆：对于 \lstinline{(0, last - first)} 中的所有整数 \lstinline{i}， \lstinline{bool(comp(first[(i - 1) / 2], first[i]))} 都是 \lstinline{false}。
+
+\textit{在标头 \lstinline{<algorithm>} 定义}
+
+
+\noindent \lstinline{push_heap}
+
+添加元素到最⼤堆 (函数模板)
+
+\noindent \lstinline{ranges::push_heap} (C++20)
+
+添加元素到最⼤堆 (算法函数对象)
+
+\noindent \lstinline{pop_heap}
+
+移除最⼤堆中最⼤元 (函数模板)
+
+\noindent \lstinline{ranges::pop_heap} (C++20)
+
+移除最⼤堆中最⼤元 (算法函数对象)
+
+\noindent \lstinline{make_heap}
+
+从元素范围创建最⼤堆 (函数模板)
+
+\noindent \lstinline{ranges::make_heap} (C++20)
+
+从元素范围创建最⼤堆 (算法函数对象)
+
+\noindent \lstinline{sort_heap}
+
+将最⼤堆变成按升序排序的元素范围 (函数模板)
+
+\noindent \lstinline{ranges::sort_heap} (C++20)
+
+将最⼤堆变成按升序排序的元素范围 (算法函数对象)
+
+\noindent \lstinline{is_heap}
+
+检查给定范围是否为最⼤堆 (函数模板)
+
+\noindent \lstinline{ranges::is_heap} (C++20)
+
+检查给定范围是否为最⼤堆 (算法函数对象)
+
+\noindent \lstinline{is_heap_until} (C++11)
+
+查找能成为最⼤堆的最⼤⼦范围 (函数模板)
+
+\noindent \lstinline{ranges::is_heap_until} (C++20)
+
+查找能成为最⼤堆的最⼤⼦范围 (算法函数对象)
+
+\noindent \textbf{最小/最大操作}
+
+\textit{在标头 \lstinline{<algorithm>} 定义}
+
+
+\noindent \lstinline{max} 
+
+返回给定值中较⼤者 (函数模板)
+
+\noindent \lstinline{ranges::max} (C++20) 
+
+返回给定值中较⼤者 (算法函数对象)
+
+\noindent \lstinline{max_element}
+
+返回范围中最⼤元 (函数模板)
+
+\noindent \lstinline{ranges::max_element} (C++20)
+
+返回范围中最⼤元 (算法函数对象)
+
+\noindent \lstinline{min}
+
+返回给定值中较⼩者 (函数模板)
+
+\noindent \lstinline{ranges::min} (C++20)
+
+返回给定值中较⼩者 (算法函数对象)
+
+\noindent \lstinline{min_element}
+
+返回范围中最⼩元 (函数模板)
+
+\noindent \lstinline{ranges::min_element} (C++20)
+
+返回范围中最⼩元 (算法函数对象)
+
+\noindent \lstinline{minmax} (C++11)
+
+返回两个元素间的较⼩者和较⼤者 (函数模板)
+
+\noindent \lstinline{ranges::minmax} (C++20)
+
+返回两个元素间的较⼩者和较⼤者 (算法函数对象)
+
+\noindent \lstinline{minmax_element} (C++11)
+
+返回范围中的最⼩元和最⼤元 (函数模板)
+
+\noindent \lstinline{ranges::minmax_element} (C++20)
+
+返回范围中的最⼩元和最⼤元 (算法函数对象)
+
+\noindent \lstinline{clamp} (C++17)
+
+在⼀对边界值下夹逼⼀个值 (函数模板)
+
+\noindent \lstinline{ranges::clamp} (C++20)
+
+在⼀对边界值下夹逼⼀个值 (算法函数对象)
+
+\noindent \textbf{字典序比较操作}
+
+\textit{在标头 \lstinline{<algorithm>} 定义}
+
+
+\noindent \lstinline{lexicographical_compare}
+
+当⼀个范围字典序⼩于另⼀个时返回 \lstinline{true} (函数模板)
+
+\noindent \lstinline{ranges::lexicographical_compare} (C++20)
+
+当⼀个范围字典序⼩于另⼀个时返回 \lstinline{true} (算法函数对象)
+
+\noindent \lstinline{lexicographical_compare_three_way} (C++20)
+
+三路⽐较两个范围 (函数模板)
+
+\noindent \textbf{排列操作}
+
+\textit{在标头 \lstinline{<algorithm>} 定义}
+
+
+\noindent \lstinline{next_permutation}
+
+⽣成元素范围的下⼀个字典序更⼤的排列 (函数模板)
+
+\noindent \lstinline{ranges::next_permutation} (C++20)
+
+⽣成元素范围的下⼀个字典序更⼤的排列 (算法函数对象)
+
+\noindent \lstinline{prev_permutation}
+
+⽣成元素范围的下⼀个字典序更⼩的排列 (函数模板)
+
+\noindent \lstinline{ranges::prev_permutation} (C++20)
+
+⽣成元素范围的下⼀个字典序更⼩的排列 (算法函数对象)
+
+\noindent \lstinline{is_permutation} (C++11)
+
+判断⼀个序列是否为另⼀个序列的排列 (函数模板)
+
+\noindent \lstinline{ranges::is_permutation} (C++20)
+
+判断⼀个序列是否为另⼀个序列的排列 (算法函数对象)
+
+\textbf{数值运算}
+
+\textit{在标头 \lstinline{<numeric>} 定义}
+
+
+\noindent \lstinline{iota} (C++11)
+
+从初始值开始连续递增填充范围 (函数模板)
+
+\noindent \lstinline{ranges::iota} (C++23)
+
+从初始值开始连续递增填充范围 (算法函数对象)
+
+\noindent \lstinline{accumulate}
+
+求和或折叠范围中元素 (函数模板)
+
+\noindent \lstinline{inner_product}
+
+计算两个范围中元素的内积 (函数模板)
+
+\noindent \lstinline{adjacent_difference}
+
+计算范围中相邻元素的差 (函数模板)
+
+\noindent \lstinline{partial_sum}
+
+计算范围中元素的部分和 (函数模板)
+
+\noindent \lstinline{reduce} (C++17)
+
+类似 \lstinline{std::accumulate}，但不依序执⾏ (函数模板)
+
+\noindent \lstinline{exclusive_scan} (C++17)
+
+类似 \lstinline{std::partial_sum}，第 \lstinline{i} 个和中排除第 \lstinline{i} 个输⼊ (函数模板)
+
+\noindent \lstinline{inclusive_scan} (C++17)
+
+类似 \lstinline{std::partial_sum}，第 \lstinline{i} 个和中包含第 \lstinline{i} 个输⼊ (函数模板)
+
+\noindent \lstinline{transform_reduce} (C++17)
+
+应⽤可调⽤对象，然后乱序规约 (函数模板)
+
+\noindent \lstinline{transform_exclusive_scan} (C++17)
+
+应⽤可调⽤对象，然后计算排除扫描 (函数模板)
+
+\noindent \lstinline{transform_inclusive_scan} (C++17)
+
+应⽤可调⽤对象，然后计算包含扫描 (函数模板)

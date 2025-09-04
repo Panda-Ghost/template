@@ -73,8 +73,9 @@
             ]
         },
         {
-            "name": "XeLaTeX*2",
+            "name": "XeLaTeX*3",
             "tools": [
+                "xelatex",
                 "xelatex",
                 "xelatex"
             ]
