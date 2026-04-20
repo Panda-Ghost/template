@@ -1,15 +1,15 @@
 syntax on
-set ts=4 et ai cin sw=4 nu sts=4 sm ru mouse=a title wim=list
-" im <F1> <esc>:w<CR>
-im <F5> <esc>:bel ter<CR>
-" nn <F1> :w<CR>
-nn <F5> :bel ter<CR>
+set ts=2 sw=2 sts=2
+set et ai cin nu sm ru cul
+set mouse=a title wim=list nowrap ls=2
+set ml sc
+set mls=5
+set fdm=marker
+colo desert
 
 im <C-S> <esc>:w<CR>
 nn <C-S> :w<CR>
-set mp=gnumake
-com! Mk sil mak | uns redr! | cw
-nn <C-M> :Mk<CR>
+nn <space> za
 
 "   set shell=powershell
 "   set backspace=indent,eol,start
