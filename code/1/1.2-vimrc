@@ -11,7 +11,11 @@ im <C-S> <esc>:w<CR>
 nn <C-S> :w<CR>
 nn <space> za
 
+" 使用 Windows 环境时可能需要
 "   set shell=powershell
 "   set backspace=indent,eol,start
 "   set nocompatible
 " set sh=powershell bs=indent,eol,start nocp
+"
+" 如果 <C-S> 导致 vim 卡死
+" 在 .bashrc 里加一句 stty -ixon
