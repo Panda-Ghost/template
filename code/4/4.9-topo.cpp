@@ -5,8 +5,8 @@ void topo() {
   // 不要忘记在建图时记录入度
   queue<int> q;
   REP( i, 1, n )
-  if ( in[i] == 0 )
-    q.push( i );
+    if ( in[i] == 0 )
+      q.push( i );
   while ( !q.empty() ) {
     int u = q.front();
     q.pop();
