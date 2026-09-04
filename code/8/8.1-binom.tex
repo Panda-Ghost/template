@@ -1,0 +1,61 @@
+
+二项式系数定义，上指标可以取任意实数，下指标取任意整数
+
+\[
+\binom{r}{k} = \left\{
+\begin{aligned}
+&\frac{r(r-1)\cdots (r-k+1)}{k(k-1)\cdots (1)} = \frac{r^{\underline{k}}}{k!}, &\text{整数 }k\ge 0 \\
+&0, &\text{整数 }k < 0
+\end{aligned}
+\right.
+\]
+
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8} % 增大行距
+
+  \begin{tabular}{l@{\hspace{2cm}}l}
+    \toprule
+
+    $\dbinom{n}{k} = \dfrac{n!}{k!(n-k)!}, \quad$
+    整数 $n\ge k\ge 0$
+    & 阶乘展开式 \\
+
+    $\dbinom{n}{k} = \dbinom{n}{n-k}, \quad$
+    整数 $n\ge 0$，$k$ 是整数
+    & 对称恒等式 \\
+
+    $\dbinom{r}{k} = \dfrac{r}{k}\dbinom{r-1}{k-1}, \quad$
+    整数 $k \neq 0$
+    & 吸收/提取恒等式 \\
+
+    $\dbinom{r}{k} = \dbinom{r-1}{k} + \dbinom{r-1}{k-1}, \quad$
+    $k$ 是整数
+    & 加法/归纳恒等式 \\
+
+    $\dbinom{r}{k} = (-1)^k\dbinom{k-r-1}{k}, \quad$
+    $k$ 是整数
+    & 上指标反转 \\
+
+    $\dbinom{r}{m} \dbinom{m}{k}= \dbinom{r}{k}\dbinom{r-k}{m-k}, \quad$
+    $m,k$ 是整数
+    & 三项式版恒等式 \\
+
+    $\sum_{k}\dbinom{r}{k} x^{k} y^{r-k}= (x+y)^{r}, \quad$
+    整数 $r \geq 0$ 或者 $|x/y|<1$
+    & 二项式定理 \\
+
+    $\sum_{k\le n}\dbinom{r+k}{k} = \dbinom{r+n+1}{n}, \quad$
+    $n$ 是整数
+    & 平行求和法 \\
+
+    $\sum_{0\le k \le n}\dbinom{k}{m} = \dbinom{n+1}{m+1}, \quad$
+    整数 $m,n \geq 0$
+    & 上指标求和法 \\
+
+    $\sum_{k} \dbinom{r}{k} \dbinom{s}{n-k}= \dbinom{r+s}{n}, \quad$
+    $n$ 是整数
+    & 范德蒙德卷积公式 \\
+    \bottomrule
+  \end{tabular}
+\end{table}

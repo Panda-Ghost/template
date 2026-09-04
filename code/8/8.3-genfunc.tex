@@ -1,0 +1,30 @@
+
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8} % 增大行距
+
+  \begin{tabular}{l@{\hspace{2cm}}l@{\hspace{2cm}}l}
+    \toprule
+    数列 & 生成函数 & 封闭形式 \\
+    \midrule
+
+    $\langle1,0,0,0,0,0,\cdots\rangle$ & $\sum_{n\ge 0}[n=0]z^n$ & $1$ \\
+    $\langle0,\cdots,0,1,0,0,\cdots\rangle$ & $\sum_{n\ge 0}[n=m]z^n$ & $z^m$ \\
+    $\langle1,1,1,1,1,1,\cdots\rangle$ & $\sum_{n\ge 0}z^n$ & $\dfrac{1}{1-z}$ \\
+    $\langle1,-1,1,-1,1,-1,\cdots\rangle$ & $\sum_{n\ge 0}(-1)^nz^n$ & $\dfrac{1}{1+z}$ \\
+    $\langle1,0,1,0,1,0,\cdots\rangle$ & $\sum_{n\ge 0}[2\mid n]z^n$ & $\dfrac{1}{1-z^2}$ \\
+    $\langle1,0,\cdots,0,1,0,\cdots,0,1,0,\cdots\rangle$ & $\sum_{n\ge 0}[m\mid n]z^n$ & $\dfrac{1}{1-z^m}$ \\
+    $\langle1,2,3,4,5,6,\cdots\rangle$ & $\sum_{n\ge 0}(n+1)z^n$ & $\dfrac{1}{(1-z)^2}$ \\
+    $\langle1,2,4,8,16,32,\cdots\rangle$ & $\sum_{n\ge 0}2^nz^n$ & $\dfrac{1}{1-2z}$ \\
+    $\langle1,4,6,4,1,0,0,\cdots\rangle$ & $\sum_{n\ge 0}\dbinom{4}{n}z^n$ & $(1+z)^4$ \\
+    $\langle1,c,\dbinom{c}{2},\dbinom{c}{3},\cdots\rangle$ & $\sum_{n\ge 0}\dbinom{c}{n}z^n$ & $(1+z)^c$ \\
+    $\langle1,c,\dbinom{c+1}{2},\dbinom{c+2}{3},\cdots\rangle$ & $\sum_{n\ge 0}\dbinom{c+n-1}{n}z^n$ & $\dfrac{1}{(1-z)^c}$ \\
+    $\langle1,c,c^2,c^3,\cdots\rangle$ & $\sum_{n\ge 0}c^nz^n$ & $\dfrac{1}{1-cz}$ \\
+    $\langle1,\dbinom{m+1}{m},\dbinom{m+2}{m},\dbinom{m+3}{m},\cdots\rangle$ & $\sum_{n\ge 0}\dbinom{m+n}{m}z^n$ & $\dfrac{1}{(1-z)^{m+1}}$ \\
+    $\langle0,1,\dfrac{1}{2},\dfrac{1}{3},\dfrac{1}{4},\cdots\rangle$ & $\sum_{n\ge 1}\dfrac{1}{n}z^n$ & $\ln \dfrac{1}{1-z}$ \\
+    $\langle0,1,-\dfrac{1}{2},\dfrac{1}{3},-\dfrac{1}{4},\cdots\rangle$ & $\sum_{n\ge 1}\dfrac{(-1)^{n+1}}{n}z^n$ & $\ln (1 + z)$ \\
+    $\langle1,1,\dfrac{1}{2},\dfrac{1}{6},\dfrac{1}{24},\dfrac{1}{120},\cdots\rangle$ & $\sum_{n\ge 0}\dfrac{1}{n!}z^n$ & $e^z$ \\
+
+    \bottomrule
+  \end{tabular}
+\end{table}

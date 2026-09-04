@@ -1,0 +1,23 @@
+就放个结论
+
+设 $f(x)$ 是任意一个具有如下性质且在一个实数区间连续的单调递增函数
+
+\[
+  f(x) \text{ 是整数} \implies x \text{ 是整数} 
+\]
+
+于是，只要 $f(x)$、$f(\lfloor x \rfloor)$ 和 $f(\lceil x \rceil)$ 都有定义，我们就有
+
+\[
+  \lfloor f(x) \rfloor = \lfloor f(\lfloor x \rfloor) \rfloor
+  \text{ 和 } \;
+  \lceil f(x) \rceil = \lceil f(\lceil x \rceil) \rceil
+\]
+
+其中有个重要特例：如果 $m$ 和 $n$ 是整数且分母 $n$ 为正，则
+
+\[
+\left\lfloor \frac{x + m}{n} \right\rfloor = \left\lfloor \frac{\lfloor x \rfloor + m}{n} \right\rfloor
+\text{ 和 } \;
+\left\lceil \frac{x + m}{n} \right\rceil = \left\lceil \frac{\lceil x \rceil + m}{n} \right\rceil
+\]
